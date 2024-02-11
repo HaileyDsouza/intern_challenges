@@ -1,6 +1,6 @@
 def removeDuplicates(nums):
     count = 0
-    for i in range(0, len(nums)):
+    for i in range(len(nums)):
         if nums[i] != nums[i-1]:
             nums[count] = nums[i]
             count += 1
