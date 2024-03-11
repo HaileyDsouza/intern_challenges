@@ -52,11 +52,14 @@ class MyLinkedList:
         if index < 0 or index > self.length:
             return
 
+        #index at start 
         if index == 0:
             self.addAtHead(val)
+        #index at end
         elif index == self.length:
             self.addAtTail(val)
         else:
+            #index between
             newNode = Node(val)
             currNode = self.head
             for _ in range(index):
@@ -84,7 +87,7 @@ class MyLinkedList:
             self.tail = self.tail.prev
             self.tail.next = None
         else:
-            #index at middle 
+            #index between 
             currNode = self.head
             for _ in range(index):
                 currNode = currNode.next
